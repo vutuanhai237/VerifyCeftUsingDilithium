@@ -9,6 +9,7 @@ import java.security.SignatureException;
 import java.security.SignatureSpi;
 
 import net.thiim.dilithium.impl.Dilithium;
+import net.thiim.dilithium.impl.DilithiumPrivateKeyImpl;
 import net.thiim.dilithium.interfaces.DilithiumPrivateKey;
 import net.thiim.dilithium.interfaces.DilithiumPublicKey;
 
@@ -36,7 +37,8 @@ public class DilithiumSignature extends SignatureSpi {
 
 	@Override
 	protected void engineInitSign(PrivateKey privateKey) throws InvalidKeyException {
-		if(!(privateKey instanceof DilithiumPrivateKey)) {
+		
+		if(!(privateKey instanceof DilithiumPrivateKey) && !(privateKey instanceof DilithiumPrivateKeyImpl)) {
 			throw new IllegalArgumentException("Not a valid private key");
 		}
 		

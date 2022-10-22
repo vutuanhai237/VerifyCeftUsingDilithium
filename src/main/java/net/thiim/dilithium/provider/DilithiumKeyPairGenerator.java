@@ -37,9 +37,9 @@ public class DilithiumKeyPairGenerator extends KeyPairGeneratorSpi {
 	@Override
 	public void initialize(AlgorithmParameterSpec params, SecureRandom random)
 			throws InvalidAlgorithmParameterException {
-		if (!(params instanceof DilithiumParameterSpec)) {
-			throw new InvalidAlgorithmParameterException("Inappropriate parameter type");
-		}
+//		if (!(params instanceof DilithiumParameterSpec)) {
+//			throw new InvalidAlgorithmParameterException("Inappropriate parameter type");
+//		}
 		this.params = (DilithiumParameterSpec) params;
 		this.random = random;
 	}

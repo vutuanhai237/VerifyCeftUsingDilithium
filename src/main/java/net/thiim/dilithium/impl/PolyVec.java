@@ -4,15 +4,19 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class PolyVec {
-	Poly[] poly; 
+	public Poly[] poly; 
+	
+	
+	public PolyVec() 
+	{
+		this.poly = null;
+	}	
+	
 	public PolyVec(int sz)
 	{
 		this.poly = new Poly[sz];
 	}
-	
-	private PolyVec() 
-	{
-	}	
+
 	
 	public static PolyVec randomVec(byte[] rho, int eta, int length, int nonce) {
 		PolyVec pv = new PolyVec(length);		

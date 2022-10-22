@@ -3,8 +3,11 @@ package net.thiim.dilithium.impl;
 import org.bouncycastle.crypto.digests.SHAKEDigest;
 
 public class Poly {
-	int[] coef;
+	public int[] coef;
 
+	public Poly() {
+		this.coef = null;
+	}
 	public Poly(int n) {
 		this.coef = new int[n];
 	}

@@ -5,6 +5,7 @@ import java.security.Provider;
 
 public class DilithiumProvider extends Provider {
 
+	@SuppressWarnings({ "deprecation", "removal" })
 	public DilithiumProvider() {
 		super("Dilithium Provider", "0.1", "For experimental use only");
 		
